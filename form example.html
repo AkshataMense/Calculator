@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Example</title>
+</head>
+<body>
+	<div>
+		<form>
+			<fieldset>
+				<legend>PALINDROME</legend>
+				<br>
+				<label>Number: </label>
+				<input type="text" name="num" id="num" autofocus>
+				<br><br>
+				<input type="button" name="chk" value="Check" onclick="isPalindrome()">
+				<h4 id="op"> OUTPUT</h4>
+			</fieldset>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function isPalindrome()
+		{
+			let dt = (document.getElementById("num").value);
+			let op = document.getElementById("op");
+			let rev = dt.split("").reverse().join("");
+			if(dt==rev)
+			{
+				op.innerHTML = dt + " It is Palindrome";
+				op.style.color="green";
+			}
+			else
+			{
+				op.innerHTML = dt + " It is not Palindrome";
+				op.style.color="red";
+			}
+			document.getElementById("num").value = "";
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+
+</body>
+</html>
